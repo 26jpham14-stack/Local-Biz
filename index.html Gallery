@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"><title>Gallery | Avila's El Ranchito</title></head>
+<body>
+    <nav><h1>AVILA'S EL RANCHITO</h1><div class="links"><a href="index.html">Home</a><a href="story.html">Our Story</a><a href="menu.html">Menu</a><a href="gallery.html">Gallery</a></div></nav>
+    <div class="content">
+        <h2>Life at El Ranchito</h2>
+        <div class="grid">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="card">
+            <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b" class="card">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641" class="card">
+            <img src="https://images.unsplash.com/photo-1613514785940-daed07799d9b" class="card">
+            <img src="https://images.unsplash.com/photo-1582169542910-6c1a5c0cdd64" class="card">
+            <img src="https://images.unsplash.com/photo-1534353436294-0dbd4bdac845" class="card">
+            <img src="https://images.unsplash.com/photo-1593504049359-7b7d923b5c10" class="card">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="card">
+            <img src="https://images.unsplash.com/photo-1562133265-716301314483" class="card">
+            <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea" class="card">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" class="card">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add" class="card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" class="card">
+            <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85" class="card">
+            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5" class="card">
+        </div>
+    </div>
+</body>
+</html>
