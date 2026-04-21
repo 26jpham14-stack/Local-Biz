@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="style.css"><title>Home | Avila's El Ranchito</title></head>
+<body>
+    <nav>
+        <h1>AVILA'S EL RANCHITO</h1>
+        <div class="links"><a href="index.html">Home</a><a href="story.html">Our Story</a><a href="menu.html">Menu</a><a href="gallery.html">Gallery</a></div>
+    </nav>
+    <div class="hero"><h1>Authentic Mexican Comfort</h1></div>
+    <div class="content">
+        <center><h2>Welcome to our Cocina</h2></center>
+        <div class="grid">
+            <div class="card"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"><h3>Famous Tacos</h3></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1599974590211-59cf1b290c1e"><h3>Fresh Salsas</h3></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1536184071535-78906f7172c2"><h3>Hand-Pressed Tortillas</h3></div>
+        </div>
+    </div>
+    <footer>&copy; 2026 Avila's El Ranchito | Est. 1966</footer>
+</body>
+</html>
