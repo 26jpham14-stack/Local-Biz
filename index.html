@@ -2,33 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Hearth & Stone | Artisanal Bakery</title>
-    <style>
-        :root {
-            --primary: #2d2d2d;
-            --accent: #c5a059;
-            --light: #f9f9f7;
-        }
-        body { font-family: 'Georgia', serif; margin: 0; color: var(--primary); background: var(--light); }
-        nav { display: flex; justify-content: space-between; padding: 2rem 5%; align-items: center; }
-        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--primary); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        .hero { height: 60vh; background: #e0e0e0; display: flex; align-items: center; justify-content: center; text-align: center; }
-        .gallery-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-            gap: 15px; padding: 5%; 
-        }
-        .gallery-grid img { width: 100%; height: 300px; object-fit: cover; border-radius: 4px; transition: transform 0.3s; }
-        .gallery-grid img:hover { transform: scale(1.02); }
-        footer { text-align: center; padding: 3rem; background: var(--primary); color: white; margin-top: 50px; }
-    </style>
+    <title>Avila's El Ranchito | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <nav>
-        <h2>HEARTH & STONE</h2>
-        <div class="nav-links">
+        <h1>AVILA'S EL RANCHITO</h1>
+        <div class="links">
             <a href="index.html">Home</a>
             <a href="story.html">Our Story</a>
             <a href="menu.html">Menu</a>
@@ -36,13 +16,42 @@
         </div>
     </nav>
 
-    <section class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Sourdough">
-        </section>
+    <header class="hero">
+        <div>
+            <h1 style="font-size: 4rem; margin-bottom: 10px;">Tradition You Can Taste</h1>
+            <p style="font-size: 1.5rem; color: var(--gold);">Independent & Family Owned Since 1966</p>
+            <a href="menu.html" style="display:inline-block; margin-top:20px; padding: 15px 30px; background: var(--mexican-red); color:white; text-decoration:none; border-radius: 5px; font-weight:bold;">VIEW MENU</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">Follow Us @ElRanchito</h2>
+        <p style="text-align:center; margin-top:-30px;">See what's fresh from our kitchen daily on Instagram.</p>
+        <div class="insta-grid">
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400">
+            <img src="https://images.unsplash.com/photo-1593504049359-7b7d923b5c10?w=400">
+            <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=400">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400">
+        </div>
+    </section>
+
+    <section class="container" style="background: #efeee0; border-radius: 20px;">
+        <h2 class="section-title">What the Familia Says</h2>
+        <div class="grid">
+            <div class="card-body" style="background:white; border-radius:10px;">
+                <p>"Best Carnitas in town. It tastes exactly like my Abuela's kitchen. You have to try the Mamá's Soup!"</p>
+                <strong>- Carlos R. (Yelp)</strong>
+            </div>
+            <div class="card-body" style="background:white; border-radius:10px;">
+                <p>"The atmosphere is so warm. Not a franchise, and you can really feel the family love in the service."</p>
+                <strong>- Sarah M. (Google)</strong>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 The Hearth & Stone Bakery | 123 Artisan Way</p>
+        <p>123 Hacienda Way, Santa Ana, CA | (555) 123-4567</p>
+        <p>&copy; 2026 Avila's El Ranchito</p>
     </footer>
-
 </body>
 </html>
