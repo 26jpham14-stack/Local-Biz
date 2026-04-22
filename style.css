@@ -1,112 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;700&family=Montserrat:wght@200;400;600&display=swap');
 
 :root {
-    --mexican-red: #9e1b32;
-    --deep-teal: #005f6b;
-    --warm-gold: #c5a059;
-    --background: #fdfaf5;
-    --text-dark: #2d2424;
-    --white: #ffffff;
+    --bg-dark: #0a0a0a;
+    --card-bg: #141414;
+    --accent-gold: #c5a059;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
 }
 
 * { box-sizing: border-box; }
-
 body { 
-    font-family: 'Poppins', sans-serif; 
-    margin: 0; 
-    background-color: var(--background); 
-    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif; 
+    background-color: var(--bg-dark); 
+    color: var(--text-main); 
+    margin: 0;
+    overflow-x: hidden;
 }
 
-/* NAVIGATION */
+/* NAVIGATION: Transparent to Solid on Scroll Effect */
 nav { 
-    background: var(--white); 
-    padding: 1.5rem 10%; 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    position: sticky; 
+    padding: 2rem 10%; 
+    position: fixed; 
+    width: 100%; 
     top: 0; 
     z-index: 1000;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 nav h1 { 
-    font-family: 'Playfair Display', serif; 
-    margin: 0; 
-    color: var(--mexican-red); 
-    font-size: 1.8rem;
-    letter-spacing: -1px;
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 1.8rem; 
+    letter-spacing: 4px; 
+    margin: 0;
+    color: var(--accent-gold);
 }
 
 .links a { 
-    margin-left: 25px; 
     text-decoration: none; 
-    color: var(--text-dark); 
-    font-weight: 600; 
-    font-size: 0.9rem;
-    transition: color 0.3s;
+    color: var(--text-main); 
+    margin-left: 30px; 
+    font-size: 0.75rem; 
+    letter-spacing: 2px; 
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-.links a:hover { color: var(--mexican-red); }
+.links a:hover { color: var(--accent-gold); }
 
-/* HERO SECTION */
+/* HERO: Video-style image background */
 .hero { 
-    height: 70vh; 
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://images.unsplash.com/photo-1593504049359-7b7d923b5c10?auto=format&fit=crop&w=1600&q=80') center/cover;
+    height: 100vh; 
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80') center/cover;
     display: flex; 
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
-    color: var(--white); 
     text-align: center;
 }
 
-.hero h2 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 0; }
-.hero p { font-size: 1.2rem; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; }
+.hero h2 { 
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: clamp(3rem, 10vw, 6rem); 
+    font-weight: 300;
+    margin: 0;
+}
 
-/* LAYOUT & CARDS */
-.container { max-width: 1200px; margin: auto; padding: 80px 20px; }
+.hero p { 
+    font-size: 0.9rem; 
+    letter-spacing: 5px; 
+    text-transform: uppercase; 
+    color: var(--accent-gold); 
+    margin-top: 20px;
+}
 
-.section-header { text-align: center; margin-bottom: 50px; }
-.section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--mexican-red); }
+/* SECTIONS */
+.container { padding: 100px 10%; }
 
-.grid { 
+.split-section { 
+    display: flex; 
+    align-items: center; 
+    gap: 80px; 
+    margin-bottom: 150px; 
+}
+
+.split-text { flex: 1; }
+.split-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 20px; }
+.split-text p { color: var(--text-muted); line-height: 2; font-size: 0.95rem; }
+
+.split-image { flex: 1; height: 600px; overflow: hidden; border: 1px solid rgba(197, 160, 89, 0.3); padding: 15px; }
+.split-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(30%); transition: 1s; }
+.split-image img:hover { filter: grayscale(0%); transform: scale(1.05); }
+
+/* GALLERY GRID */
+.gallery-grid { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 15px; 
 }
 
-.card { 
-    background: var(--white); 
-    border-radius: 15px; 
-    overflow: hidden; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.4s;
+.gallery-grid img { 
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover; 
+    opacity: 0.7; 
+    transition: 0.5s; 
 }
 
-.card:hover { transform: translateY(-10px); }
+.gallery-grid img:hover { opacity: 1; transform: translateY(-5px); }
 
-.card img { width: 100%; height: 250px; object-fit: cover; }
-
-.card-content { padding: 25px; }
-.card-content h3 { margin-top: 0; color: var(--deep-teal); }
-
-/* FORM */
-.contact-container { background: var(--white); padding: 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
-input, textarea { 
-    width: 100%; padding: 15px; margin: 10px 0 20px; 
-    border: 1px solid #eee; border-radius: 8px; background: #f9f9f9;
-    font-family: inherit;
+/* FOOTER */
+footer { 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    padding: 80px 10%; 
+    text-align: center;
+    background: #050505;
 }
 
-button { 
-    background: var(--mexican-red); color: white; border: none; 
-    padding: 18px 40px; border-radius: 8px; cursor: pointer; 
-    font-weight: 600; width: 100%; transition: 0.3s;
+.btn-gold { 
+    display: inline-block; 
+    padding: 15px 40px; 
+    border: 1px solid var(--accent-gold); 
+    color: var(--accent-gold); 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-size: 0.8rem;
+    transition: 0.3s;
 }
 
-button:hover { background: var(--deep-teal); }
-
-footer { background: var(--text-dark); color: #888; text-align: center; padding: 50px; margin-top: 80px; }
+.btn-gold:hover { background: var(--accent-gold); color: black; }
